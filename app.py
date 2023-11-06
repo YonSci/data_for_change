@@ -3,12 +3,10 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-
 st.sidebar.success("Select a page")
-
-        col1, col2= st.columns((3,7))
-        col1.image(display, width = 200)
-        col2.title("Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-CDAT)")
+col1, col2= st.columns((3,7))
+col1.image(display, width = 200)
+col2.title("Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-CDAT)")
         st.markdown(
             """
             ---
