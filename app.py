@@ -67,6 +67,13 @@ def Deficiency_Predictor():
        st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        #st.title('Vitamin/Mineral Deficiency Predictor')
 
+       # Load the trained machine-learning models    
+       with open('decision_tree_model.pkl', 'rb') as f:
+              dt_model = pickle.load(f)
+
+       with open('svm_model.pkl', 'rb') as f:
+              svm_model = pickle.load(f)
+
 
       
 
