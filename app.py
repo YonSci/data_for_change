@@ -23,7 +23,6 @@ def intro():
        data = {'Algorithm': ['RF', 'DT', 'SVM'],
                'Accuracy': [0.9069, 0.9047, 0.8919],
                'Precision': [0.9615, 0.9816, 0.9394],
-               'Recall': [None, None, 0.8919],
                'F1-score': [0.9263, 0.9318, 0.9082]
               }
 
