@@ -7,19 +7,19 @@ st.sidebar.success("Select a page")
 col1, col2= st.columns((3,7))
 col1.image(display, width = 200)
 col2.title("Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-CDAT)")
-        st.markdown(
+st.markdown(
             """
             ---
             """
-            )
-        st.markdown(
+)
+st.markdown(
                 """
                 The **Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-CDAT)** web application is designed to automate the data work flow at the Meteorological Data and Climatology Directorate and to generate charts, graphs, maps, and tabular outputs, as well as intermediate results required for the production of climate bulletins. 
                 
                 **EMI-CDAT** is build & deploy using the [Streamlit](https://docs.streamlit.io/) application development tool. The [Altair](https://altair-viz.github.io/index.html), [Bokeh](https://bokeh.org/), [Holoviews](https://holoviews.org/), [Plotly  Graphing Libraries](https://plotly.com/graphing-libraries/), [SciPy](https://scipy.org/), [NCAR PyNGL](https://www.pyngl.ucar.edu/index.shtml), & [PyNIO](https://www.pyngl.ucar.edu/index.shtml) visualizations packages are used to improve the statistical visualization and mapping capabilities of the App.
                 """
                 )
-        st.markdown(
+st.markdown(
                     """
                     ---
                     EMI-CDAT App features includes:
@@ -33,26 +33,26 @@ col2.title("Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-C
                     """
                     )
         
-        st.markdown(
+st.markdown(
         """
         ---
         """
         )
                 
-        st.markdown('### Our Partners')
-        display1 = Image.open('aiccra.png')
-        #display2 = Image.open('CGIAT.png')
-        #display3 = Image.open('CCAFS.png')
+st.markdown('### Our Partners')
+display1 = Image.open('aiccra.png')
+#display2 = Image.open('CGIAT.png')
+#display3 = Image.open('CCAFS.png')
         
-        col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns(3)
         
-        col1, col2, col3 = st.columns(3)
-        col1.image(display1, width = 450)
-        # col2.image(display2, width = 200)
-        # col3.image(display3, width = 200)
+col1, col2, col3 = st.columns(3)
+col1.image(display1, width = 450)
+# col2.image(display2, width = 200)
+# col3.image(display3, width = 200)
         
-        st.markdown('Copyright @2022 EMI-CDAT')
-        st.markdown(
+st.markdown('Copyright @2022 EMI-CDAT')
+st.markdown(
                         """
                         ---
                         """
