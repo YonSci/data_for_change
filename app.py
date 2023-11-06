@@ -7,8 +7,10 @@ def intro():
        st.sidebar.success("Select a page")
        
 def Deficiency_Predictor():
+       st.title('Vitamin/Mineral Deficiency Predictor')
 
 def Visualization():
+       st.title('Vitamin/Mineral Deficiency Predictor')
        
 
 page_names_to_funcs = {
