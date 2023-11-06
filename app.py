@@ -60,10 +60,10 @@ def Deficiency_Predictor():
 
        # Load model
  
-       with open('decision_tree_model.pkl', 'rb') as f:
+       with open('DecisionTree1.pkl', 'rb') as f:
              dt_model = pickle.load(f)
 
-       with open('svm_model.pkl', 'rb') as f:
+       with open('SupportVectorMachines1.pkl', 'rb') as f:
               svm_model = pickle.load(f)
 
        # Create a sidebar to allow the user to select the machine learning model
