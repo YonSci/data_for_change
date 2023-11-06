@@ -2,8 +2,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-pip install gdown
-import gdown
+
 
 def intro():
        st.sidebar.success("Select a page")
@@ -60,20 +59,6 @@ def Deficiency_Predictor():
        st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        #st.title('Vitamin/Mineral Deficiency Predictor')
 
-       
-
-       # Share the trained machine learning model file on Google Drive and get the file ID
-       file_id = '1KqK8_uusVOosCvXanZHC-dEROA2Km40T'
-
-       # Define the URL to download the model file from Google Drive
-       url = f'https://drive.google.com/uc?id={file_id}'
-
-       # Download the model file from Google Drive using gdown
-       model_file = gdown.download(url, quiet=False)
-
-       # Load the trained machine learning model into the Streamlit app using pickle
-       with open(model_file, 'rb') as f:
-              model = pickle.load(f)
 
       
 
