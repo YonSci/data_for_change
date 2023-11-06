@@ -9,16 +9,16 @@ def intro():
        
 def Deficiency_Predictor():
        st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
-       st.title('Vitamin/Mineral Deficiency Predictor')
+       #st.title('Vitamin/Mineral Deficiency Predictor')
 
 def Visualization():
        st.markdown(f'# {list(page_names_to_funcs.keys())[2]}')
-       st.title('Vitamin/Mineral Deficiency Predictor')
+       #st.title('Visualization')
        
 
 page_names_to_funcs = {
         "🏠 Landing Page": intro,
-        "📊 Vitamin/Mineral_Deficiency_Predictor": Deficiency_Predictor, 
+        "📊 Vitamin/Mineral Deficiency Predictor": Deficiency_Predictor, 
         "📈 Visualization  ": Visualization,
     }
 
