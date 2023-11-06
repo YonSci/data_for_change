@@ -5,6 +5,7 @@ import pickle
 
 def intro():
        st.sidebar.success("Select a page")
+       st.title('Vitamin/Mineral Deficiency Predictor')
        st.markdown(
                 """
                 The **Vitamin/Mineral Deficiency Predictor Tool** is a web application/dashboard that utilizes **Random Forest**, **Decision Tree**, and **Support Vector Machine** algorithms to predict Vitamin/Mineral Deficiency in a given household in Malawi. 
