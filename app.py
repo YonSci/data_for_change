@@ -28,10 +28,10 @@ def intro():
               }
 
         # Convert the dictionary to a pandas DataFrame
-        df = pd.DataFrame(data)
+       df = pd.DataFrame(data)
 
-      # Display the DataFrame as a table in Streamlit
-      st.table(df)
+        # Display the DataFrame as a table in Streamlit
+       st.table(df)
 
        st.markdown(
                     """
