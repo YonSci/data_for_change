@@ -6,13 +6,6 @@ import pickle
 
 st.sidebar.success("Select a page")
 
-
-        display = Image.open('emi_logo.jpg')
-
-        authenticator.logout("Logout", "sidebar")
-        st.sidebar.title(f"Welcome!, {name}")
-
-
         col1, col2= st.columns((3,7))
         col1.image(display, width = 200)
         col2.title("Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-CDAT)")
