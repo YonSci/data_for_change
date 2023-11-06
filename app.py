@@ -8,7 +8,9 @@ def intro():
        st.title('Vitamin/Mineral Deficiency Predictor')
        st.markdown(
                 """
-                The **Vitamin/Mineral Deficiency Predictor Tool** is a web application/dashboard that utilizes **Random Forest**, **Decision Tree**, and **Support Vector Machine** algorithms to predict Vitamin/Mineral Deficiency in a given household in Malawi. The tool uses data collected from the Living Standards Measurement Study 2019-2020 of the World Bank, which includes predictors such as annual food consumption, annual drug consumption, annual tobacco consumption, annual health consumption, 
+                The **Vitamin/Mineral Deficiency Predictor Tool** is a web application/dashboard that utilizes **Random Forest**, **Decision Tree**, and **Support Vector Machine** algorithms to predict Vitamin/Mineral Deficiency in a given household in Malawi. 
+                
+                The tool uses data collected from the Living Standards Measurement Study 2019-2020 of the World Bank, which includes predictors such as annual food consumption, annual drug consumption, annual tobacco consumption, annual health consumption, 
                 total annual consumption, poverty line, received social safety net, and consumed foods such as Cereals, Grains, Roots, Tubers, Nuts, Pulses, vegetables, Meat, Fish, Fruits, Milk products, Fats, Oil, and Sugar products at the household level. 
 
                 The tool is designed to help address the issue of micronutrient deficiencies in Malawi, which is a significant public health concern. The tool combines insights from multiple sources to provide a comprehensive assessment of the risk of Vitamin/Mineral Deficiency in a given household. The tool has the potential to be a valuable resource for policymakers, researchers, and public health professionals working to address micronutrient deficiencies in Malawi and can be scaled up/adopted in other countries.
@@ -55,6 +57,26 @@ def intro():
 def Deficiency_Predictor():
        st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        #st.title('Vitamin/Mineral Deficiency Predictor')
+       # Add user input fields
+       illness_type = st.selectbox('Illness Type', ['Type 1 Diabetes', 'Type 2 Diabetes', 'Hypertension', 'Heart Disease'])
+       food_consumption_annual = st.slider('Food Consumption (Annual)', 0, 100, 50)
+       tobacco_consumption_annual = st.slider('Tobacco Consumption (Annual)', 0, 100, 50)
+       health_annual_consumption = st.slider('Health Annual Consumption', 0, 100, 50)
+       total_annual_consumption_per_household = st.slider('Total Annual Consumption per Household', 0, 100, 50)
+       poor_hh_below_poverty_line = st.slider('Poor Households Below Poverty Line', 0, 100, 50)
+       received_SSN = st.slider('Received Social Security Number', 0, 1, 0)
+       sugar_product = st.slider('Sugar Product', 0, 1, 0)
+       household_latitude = st.text_input('Household Latitude')
+       household_longitude = st.text_input('Household Longitude')
+       
+       # Make predictions
+       input_data = [[illness_type, food_consumption_annual, tobacco_consumption_annual, health_annual_consumption, total_annual_consumption_per_household, poor_hh_below_poverty_line, received_SSN, sugar_product, age_categories, household_latitude, household_longitude]]
+       input_df = pd.DataFrame(input_data, columns=['illness_type', 'food_consumption_annual', 'tobacco_consumption_annual', 'health_annual_consumption', 'total_annual_consumption_per_household', 'poor_hh_below_poverty_line', 'received_SSN', 'sugar_product', 'age_categories', 'household_latitude', 'household_longitude'])
+       prediction = model.predict(input_df)
+       
+       # Display the results
+       st.subheader('Prediction')
+       st.write(prediction)
 
 def Visualization():
        st.markdown(f'# {list(page_names_to_funcs.keys())[2]}')
