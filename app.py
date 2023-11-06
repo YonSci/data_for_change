@@ -4,13 +4,12 @@ import pandas as pd
 import pickle
 
 def intro():
-
+       st.sidebar.success("Select a page")
+       
 def Deficiency_Predictor():
 
 def Visualization():
        
-
-
 
 page_names_to_funcs = {
         "🏠 Landing Page": intro,
