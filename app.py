@@ -63,18 +63,6 @@ def Deficiency_Predictor():
       
 
     
-       # Add the input fields to the first column
-       illness_type = col1.selectbox('Illness Type', ['Type 1 Diabetes', 'Type 2 Diabetes', 'Hypertension', 'Heart Disease'])
-       food_consumption_annual = col1.slider('Food Consumption (Annual)', 0, 100, 50)
-       tobacco_consumption_annual = col1.slider('Tobacco Consumption (Annual)', 0, 100, 50)
-       health_annual_consumption = col1.slider('Health Annual Consumption', 0, 100, 50)
-
-       # Add the input fields to the second column
-       total_annual_consumption_per_household = col2.slider('Total Annual Consumption per Household', 0, 100, 50)
-       poor_hh_below_poverty_line = col2.slider('Poor Households Below Poverty Line', 0, 100, 50)
-       received_SSN = col2.slider('Received Social Security Number', 0, 1, 0) 
-       sugar_product = col2.slider('Sugar Product', 0, 1, 0)
-       age_categories = col2.selectbox('Age Categories', ['0-18', '19-30', '31-50', '51-70', '71+'])
 
 
 
