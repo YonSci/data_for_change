@@ -37,19 +37,19 @@ def intro():
        st.markdown(
                     """
                     ---
-                    The modeling process includes:
-                     - Importing required libraries and setting up file paths and names
-                     - Loading and inspecting the datasets, checking for missing data and handling any issues
-                     - Merging multiple data files into a single dataset
-                     - Cleaning the merged data by handling missing values, outliers etc.
-                     - Separating the data into predictor and target variables for modeling
-                     - Exploratory data analysis to understand relationships including summary statistics, correlations, and visualizations like boxplots
-                     - Preprocessing steps such as feature scaling to normalize the data
-                     - Encoding any categorical variables 
-                     - Fitting and evaluating various machine learning models such as Random Forests, Decision Trees, and Support Vector Machines on the data
-                     - Tuning model hyperparameters and selecting the best model based on accuracy metrics
-                     - Analyzing feature importance to understand the most predictive variables
-                     - Saving the best-performing model for future use
+       The modeling process includes:
+       - Importing required libraries and setting up file paths and names
+       - Loading and inspecting the datasets, checking for missing data and handling any issues
+       - Merging multiple data files into a single dataset
+       - Cleaning the merged data by handling missing values, outliers etc.
+       - Separating the data into predictor and target variables for modeling
+       - Exploratory data analysis to understand relationships including summary statistics, correlations, and visualizations like boxplots
+       - Preprocessing steps such as feature scaling to normalize the data
+       - Encoding any categorical variables 
+       - Fitting and evaluating various machine learning models such as Random Forests, Decision Trees, and Support Vector Machines on the data
+       - Tuning model hyperparameters and selecting the best model based on accuracy metrics
+       - Analyzing feature importance to understand the most predictive variables
+       - Saving the best-performing model for future use
 
   The tool is designed to help address the issue of micronutrient deficiencies in Malawi, which is a significant public health concern. The tool combines insights from multiple sources to provide a comprehensive assessment of the risk of Vitamin/Mineral Deficiency in a given household. The tool has the potential to be a valuable resource for policymakers, researchers, and public health professionals working to address micronutrient deficiencies in Malawi and can be scaled up/adopted in other countries.
 
