@@ -60,17 +60,24 @@ def Deficiency_Predictor():
        st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        #st.title('Vitamin/Mineral Deficiency Predictor')
 
-       # Load model
- 
-       with open('DecisionTree1.pkl', 'rb') as f:
-             dt_model = pickle.load(f)
+       import gdown
 
-       with open('SupportVectorMachines1.pkl', 'rb') as f:
-              svm_model = pickle.load(f)
+       # Share the trained machine learning model file on Google Drive and get the file ID
+       file_id = '1KqK8_uusVOosCvXanZHC-dEROA2Km40T'
 
-       # Create a sidebar to allow the user to select the machine learning model
-       model = st.sidebar.selectbox('Select Model', ['Random Forest', 'Decision Tree', 'SVM'])
+       # Define the URL to download the model file from Google Drive
+       url = f'https://drive.google.com/uc?id={file_id}'
 
+       # Download the model file from Google Drive using gdown
+       model_file = gdown.download(url, quiet=False)
+
+       # Load the trained machine learning model into the Streamlit app using pickle
+       with open(model_file, 'rb') as f:
+              model = pickle.load(f)
+
+      
+
+    
        # Add the input fields to the first column
        illness_type = col1.selectbox('Illness Type', ['Type 1 Diabetes', 'Type 2 Diabetes', 'Hypertension', 'Heart Disease'])
        food_consumption_annual = col1.slider('Food Consumption (Annual)', 0, 100, 50)
