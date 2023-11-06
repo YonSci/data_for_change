@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-
+import gdown
 
 def intro():
        st.sidebar.success("Select a page")
@@ -59,7 +59,7 @@ def Deficiency_Predictor():
        st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        #st.title('Vitamin/Mineral Deficiency Predictor')
 
-       import gdown
+       
 
        # Share the trained machine learning model file on Google Drive and get the file ID
        file_id = '1KqK8_uusVOosCvXanZHC-dEROA2Km40T'
