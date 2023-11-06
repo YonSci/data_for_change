@@ -43,12 +43,12 @@ def intro():
                     """
                    )
                 
-       st.markdown('### Our Partners')
-       display1 = Image.open('aiccra.png')
-       #display2 = Image.open('CGIAT.png')
-       #display3 = Image.open('CCAFS.png')
+        st.markdown('### Our Partners')
+        display1 = Image.open('aiccra.png')
+        #display2 = Image.open('CGIAT.png')
+        #display3 = Image.open('CCAFS.png')
         
-       col1, col2, col3 = st.columns(3)
+        col1, col2, col3 = st.columns(3)
         
         col1, col2, col3 = st.columns(3)
         col1.image(display1, width = 450)
