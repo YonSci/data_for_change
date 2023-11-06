@@ -4,16 +4,15 @@ import pandas as pd
 import pickle
 
 def intro():
-       st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        st.sidebar.success("Select a page")
        
        
 def Deficiency_Predictor():
-       st.markdown(f'# {list(page_names_to_funcs.keys())[2]}')
+       st.markdown(f'# {list(page_names_to_funcs.keys())[1]}')
        st.title('Vitamin/Mineral Deficiency Predictor')
 
 def Visualization():
-       st.markdown(f'# {list(page_names_to_funcs.keys())[3]}')
+       st.markdown(f'# {list(page_names_to_funcs.keys())[2]}')
        st.title('Vitamin/Mineral Deficiency Predictor')
        
 
