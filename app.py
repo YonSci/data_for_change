@@ -2,6 +2,8 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import sklearn
+
 
 def intro():
        st.sidebar.success("Select a page")
