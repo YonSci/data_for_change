@@ -59,9 +59,7 @@ def Deficiency_Predictor():
        #st.title('Vitamin/Mineral Deficiency Predictor')
 
        # Load model
-       with open('https://drive.google.com/file/d/1KqK8_uusVOosCvXanZHC-dEROA2Km40T/view?usp=drive_link/random_forest_model.pkl', 'rb') as f:
-              rf_model = pickle.load(f)
-              
+ 
        with open('decision_tree_model.pkl', 'rb') as f:
              dt_model = pickle.load(f)
 
