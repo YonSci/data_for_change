@@ -7,15 +7,37 @@ def intro():
        st.sidebar.success("Select a page")
        st.markdown(
                 """
-                The **Ethiopian Meteorological Institute Climate Data Analysis Tool (EMI-CDAT)** web application is designed to automate the data work flow at the Meteorological Data and Climatology Directorate and to generate charts, graphs, maps, and tabular outputs, as well as intermediate results required for the production of climate bulletins. 
+                The **Vitamin/Mineral Deficiency Predictor Tool** is a web application/dashboard that utilizes **Random Forest**, **Decision Tree**, and **Support Vector Machine** algorithms to predict Vitamin/Mineral Deficiency in a given household in Malawi. 
+                The tool uses data collected from the Living Standards Measurement Study 2019-2020 of the World Bank, which includes predictors such as annual food consumption, annual drug consumption, annual tobacco consumption, annual health consumption, 
+                total annual consumption, poverty line, received social safety net, and consumed foods such as Cereals, Grains, Roots, Tubers, Nuts, Pulses, vegetables, Meat, Fish, Fruits, Milk products, Fats, Oil, and Sugar products at the household level. 
+
+                The tool is designed to help address the issue of micronutrient deficiencies in Malawi, which is a significant public health concern. The tool combines insights from multiple sources to provide a comprehensive assessment of the risk of Vitamin/Mineral Deficiency in a given household. 
+                The tool has the potential to be a valuable resource for policymakers, researchers, and public health professionals working to address micronutrient deficiencies in Malawi and can be scaled up/adopted in other countries.
                 
-                **EMI-CDAT** is build & deploy using the [Streamlit](https://docs.streamlit.io/) application development tool. The [Altair](https://altair-viz.github.io/index.html), [Bokeh](https://bokeh.org/), [Holoviews](https://holoviews.org/), [Plotly  Graphing Libraries](https://plotly.com/graphing-libraries/), [SciPy](https://scipy.org/), [NCAR PyNGL](https://www.pyngl.ucar.edu/index.shtml), & [PyNIO](https://www.pyngl.ucar.edu/index.shtml) visualizations packages are used to improve the statistical visualization and mapping capabilities of the App.
+               
+                **Vitamin/Mineral Deficiency Predictor Tool** is build & deploy using the open source [Streamlit](https://docs.streamlit.io/) application development tool. For visualization, the  [Plotly  Graphing Libraries](https://plotly.com/graphing-libraries/) package is used to improve the mapping capabilities of the App.
                 """
                 )
+
+       # Create a dictionary with the data 
+        data = {
+       'Algorithm': ['RF', 'DT', 'SVM'],
+       'Accuracy': [0.9069, 0.9047, 0.8919],
+       'Precision': [0.9615, 0.9816, 0.9394],
+       'Recall': [None, None, 0.8919],
+       'F1-score': [0.9263, 0.9318, 0.9082]
+        }
+
+      # Convert the dictionary to a pandas DataFrame
+      df = pd.DataFrame(data)
+
+      # Display the DataFrame as a table in Streamlit
+      st.table(df)
+
        st.markdown(
                     """
                     ---
-                    EMI-CDAT App features includes:
+                    Vitamin/Mineral Deficiency Predictor Tool:
                     - Reading input data in tabular formats such as Microsoft Excel spreadsheet (.xlsx) & comma separate value (.csv) & covert it to a Data-frame.
                     - The input data includes daily rainfall, maximum & minimum temperature.
                     - Summary report on the missing data
